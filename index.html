@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        background-color: #222;
+    }
+    .pic_ctn{
+        display: grid;
+        grid-template-columns: 300px 1fr;
+    }
+    .pic_select{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding: 2rem; 
+        align-items: center;
+        justify-items: center;
+    }
+    .pic_select > img{
+        width: 80px;
+        height: 200px;
+        cursor: pointer;
+    }
+    .pic_select img:last-child{
+        margin-top: 2rem;
+        width: 50px;
+        height: 50px;
+        background-color: white;
+        border-radius: 50%;
+    }
+    input{
+        display: none;
+    }
+    .pic_display{
+        align-self: center;
+        justify-self: center;
+        width: 100%;
+        height: 700px;
+        margin-left: 14rem;
+    }
+</style>
+<body>
+    <div class="pic_ctn">
+        <div class="pic_select">
+            <img src="/resources/IMG-20220516-WA0064.jpg" alt="" class="image">
+            <img src="/resources/IMG-20220516-WA0065.jpg" alt="" class="image">
+            <img src="/resources/IMG-20220516-WA0066.jpg" alt="" class="image">
+            <img src="/resources/IMG-20220516-WA0067.jpg" alt="" class="image">
+            <input type='file' id="file">
+            <label for="file"><img src="/resources/icons/plus-3107.svg" alt=""></label>
+        </div>
+        <div class="pic_display">
+            <img src="/resources/IMG-20220516-WA0068.jpg" alt="" id="display">
+        </div>
+    </div>
+</body>
+<script>
+    let slt = document.getElementsByClassName('image')
+    let img = document.getElementsByClassName('image')
+    let dis = document.getElementById('display')
+    let file = document.getElementById('file')
+    let label = document.getElementsByTagName('label')
+
+    img[0].onclick = function(){
+        dis.src = this.src
+    }
+    img[1].onclick = function(){
+        dis.src = this.src
+    }
+    img[2].onclick = function(){
+        dis.src = this.src
+    }
+    img[3].onclick = function(){
+        dis.src = this.src
+    }
+
+</script>
+</html>
